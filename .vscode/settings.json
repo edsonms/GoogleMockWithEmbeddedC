@@ -1,0 +1,8 @@
+{
+    "cmake.buildDirectory": "${workspaceFolder}/test/build",
+    "sonarlint.pathToCompileCommands": "${workspaceFolder}\\test\\build\\compile_commands.json",
+    "files.associations": {
+        "*.m": "matlab",
+        "stdint.h": "c"
+    }
+}
