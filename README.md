@@ -51,11 +51,13 @@ Then, inside the folder of the cloned project, run:
 git submodule update --init
 ```
 
-After that just open the project folder with VSCode and you are ready to build and run your tests.
+Finally, open the project folder with VSCode and you are ready to build and run your tests.
+![Alt text](image.png)
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
 To run the tests, just run the compiled executable called GoogleMockWithEmbeddedC.exe, inside the folder test/build/test/. If you are using VSCode, you can run the test directly from there, if you have the MinGW (GCC) configured to be used as compiler, and the compiling target set to GoogleMockWithEmbeddedC
+![Alt text](image-1.png)
 
 ## 🎈 Usage <a name="usage"></a>
 
