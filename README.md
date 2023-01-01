@@ -74,11 +74,13 @@ TBD
 ## ✍️ Authors <a name = "authors"></a>
 
 - [@edsonms](https://github.com/edsonms) - Idea & Initial work
+
   https://www.linkedin.com/in/edsonms/
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
 - References
+
 https://google.github.io/googletest/gmock_for_dummies.html#Using%20Mocks%20in%20Tests
 https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs
 http://blog.wingman-sw.com/linker-substitution-in-c-limitations-and-workarounds
