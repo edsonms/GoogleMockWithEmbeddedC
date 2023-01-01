@@ -21,7 +21,7 @@ extern "C" {
 #include "gpio_num.h"
 
 #define ONE_SECOND 1000000
-#define HIGH 1
+#define HIGH 255
 #define LOW 0
 
 extern esp_err_t ConfigureGPIO(gpio_num_t PinNumber);
