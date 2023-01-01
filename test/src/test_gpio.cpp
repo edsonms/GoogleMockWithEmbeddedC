@@ -13,12 +13,12 @@
 #include <gmock/gmock.h> 
 #include "gpio_mock.hpp"
 
-using ::testing::Pointee;
-using ::testing::AtLeast;
+using ::testing::_;
 using ::testing::Return;
 
 namespace GpioTests
 {
+    //System under test
     #include "toggle_gpio.c"
 
     class GpioAPIsTest : public ::testing::Test
@@ -48,15 +48,34 @@ namespace GpioTests
 
     TEST_F(GpioAPIsTest,TestConfigureGPIO)
     {
-    //List of tests to be done
-    //1 - Test passing a correct pin number, check if response is OK and if the pin was set to low       
-    //2 - Test passing invalid pin number and if the function returns an error
+    //List of tests to be done for function TestConfigureGPIO
+    //1 - Test returning success from gpio_config
+    //2 - Test returning error from gpio_config
+    esp_err_t test_return = ESP_ERR_INVALID_ARG;
+
+    //Test 1
+    EXPECT_CALL(*gpioMockObj,gpio_config(_)) //The called argument is a pointer, so we will test call expectation with the any argument pararameter
+    .Times(1)
+    .WillOnce(Return(ESP_OK));
+
+    test_return = ConfigureGPIO(GPIO_NUM_2);
+    EXPECT_EQ(ESP_OK, test_return);
+
+    //Test 2
+    test_return = ESP_ERR_INVALID_ARG;
+
+    EXPECT_CALL(*gpioMockObj,gpio_config(_)) //The called argument is a pointer, so we will test call expectation with the any argument pararameter
+    .Times(1)
+    .WillOnce(Return(ESP_ERR_INVALID_ARG));
+
+    test_return = ConfigureGPIO((gpio_num_t)(GPIO_NUM_39));
+    EXPECT_EQ(ESP_ERR_INVALID_ARG, test_return);
     
     }
 
     TEST_F(GpioAPIsTest, TestToggleGpio)
     {
-    //List of tests to be done
+    //List of tests to be done for function ToggleGpio
     //1 - Test toggling from LOW to HIGH   
     //2 - Test toggling from HIGH to LOW
     //3 - Test if passing invalid pin number returns an error
