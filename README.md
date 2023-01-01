@@ -34,81 +34,51 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+The aim of this project is to give an example of how Google Mock and Google test can be used to mock pure Embedded C functions and test them using unit tests.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 
-What things you need to install the software and how to install them.
-
+To be able to build and run this project on Windows, you will need to install git, MinGW (gcc), CMAKE and add them to the PATH. I also recommend installing and using VSCode to build and debug the project, with the extensions CMAKE and CMAKETools. After that just clone the project doing:
 ```
-Give examples
+git clone https://github.com/edsonms/GoogleMockWithEmbeddedC.git
 ```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
+Then, inside the folder of the cloned project, run:
 ```
-Give the example
+git submodule update --init
 ```
 
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
+After that just open the project folder with VSCode and you are ready to build and run your tests.
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+To run the tests, just run the compiled executable called GoogleMockWithEmbeddedC.exe, inside the folder test/build/test/. If you are using VSCode, you can run the test directly from there, if you have the MinGW (GCC) configured to be used as compiler, and the compiling target set to GoogleMockWithEmbeddedC
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+TBD
 
 ## 🚀 Deployment <a name = "deployment"></a>
 
-Add additional notes about how to deploy this on a live system.
+TBD
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [CMake](https://cmake.org/) - CMake
+- [MinGW](https://osdn.net/projects/mingw/) - MinGW (32bits)
+- [VSCode](https://code.visualstudio.com/) - Visual Studio Code
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+- [@edsonms](https://github.com/edsonms) - Idea & Initial work
+  https://www.linkedin.com/in/edsonms/
 
 ## 🎉 Acknowledgements <a name = "acknowledgement"></a>
 
-- Hat tip to anyone whose code was used
-- Inspiration
 - References
+https://google.github.io/googletest/gmock_for_dummies.html#Using%20Mocks%20in%20Tests
+https://martinfowler.com/articles/mocksArentStubs.html#TheDifferenceBetweenMocksAndStubs
+http://blog.wingman-sw.com/linker-substitution-in-c-limitations-and-workarounds
