@@ -52,7 +52,7 @@ git submodule update --init
 ```
 
 Finally, open the project folder with VSCode and you are ready to build and run your tests.
-![Alt text](image.png)
+![Alt text](image-2.png)
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
