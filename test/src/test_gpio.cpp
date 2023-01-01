@@ -33,10 +33,6 @@ namespace GpioTests
         {
             //Set up mock object
             gpioMockObj = new gpioMock;
-
-            //Replace the original function to the mock one using pointers
-            //gpio_config_ptr = gpio_config;
-            //gpio_set_level_ptr = gpio_set_level;
         }
 
         void TearDown() override
@@ -44,9 +40,6 @@ namespace GpioTests
             //Clean up the mock object used
             delete gpioMockObj;
         }
-        //Function pointers definition
-        //esp_err_t (*gpio_config_ptr)(const gpio_config_t *pGPIOConfig);
-        //esp_err_t (*gpio_set_level_ptr)(gpio_num_t gpio_num, uint32_t level);
     };
 
 
