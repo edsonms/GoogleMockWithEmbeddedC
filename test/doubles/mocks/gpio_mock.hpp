@@ -11,6 +11,7 @@
 
 #pragma once
 
+#include <memory>
 #include <gmock/gmock.h>
 #include "driver/gpio.h"
 
@@ -31,4 +32,4 @@ class gpioMock : public gpioFunctions
 };
 
 //create globl mock object
-extern gpioMock* gpioMockObj;
+extern std::unique_ptr<gpioMock> gpioMockObj;

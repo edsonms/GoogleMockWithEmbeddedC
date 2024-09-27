@@ -28,17 +28,15 @@ namespace GpioTests
     class GpioAPIsTest : public ::testing::Test
     {
     protected:
-
         void SetUp() override
         {
             //Set up mock object
-            gpioMockObj = new gpioMock;
+            gpioMockObj = make_unique<gpioMock>();
         }
 
         void TearDown() override
         {
-            //Clean up the mock object used
-            delete gpioMockObj;
+
         }
     };
 

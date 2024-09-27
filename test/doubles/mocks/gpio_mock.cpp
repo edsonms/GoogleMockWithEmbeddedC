@@ -12,7 +12,7 @@
 #include "gpio_mock.hpp"
 #include "driver/gpio.h"
 
-gpioMock* gpioMockObj;
+std::unique_ptr<gpioMock> gpioMockObj;
 
 //Create mock functions definitions for link-time replacement
 extern "C"
